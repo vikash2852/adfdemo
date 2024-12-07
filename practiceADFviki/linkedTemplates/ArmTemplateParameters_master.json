@@ -8,8 +8,20 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://vikistore.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "vikashdb01.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "vikashdb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "vikash"
 		},
 		"containerUri": {
 			"value": ""
