@@ -218,16 +218,9 @@
 								}
 							},
 							"sink": {
-								"type": "DelimitedTextSink",
-								"storeSettings": {
-									"type": "AzureBlobFSWriteSettings",
-									"copyBehavior": "FlattenHierarchy"
-								},
-								"formatSettings": {
-									"type": "DelimitedTextWriteSettings",
-									"quoteAllText": true,
-									"fileExtension": ".csv"
-								}
+								"type": "AzureSqlSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false
 							},
 							"enableStaging": false,
 							"translator": {
@@ -248,11 +241,9 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "outputdata",
+								"referenceName": "AzureSqlTable1",
 								"type": "DatasetReference",
-								"parameters": {
-									"folder": "output"
-								}
+								"parameters": {}
 							}
 						]
 					}
@@ -264,7 +255,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/inputdata')]",
-				"[concat(variables('factoryId'), '/datasets/outputdata')]"
+				"[concat(variables('factoryId'), '/datasets/AzureSqlTable1')]"
 			]
 		}
 	]
