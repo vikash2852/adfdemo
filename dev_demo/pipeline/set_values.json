@@ -73,7 +73,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "@concat('select * ','''',variables('get_month'),''' as new_column from dbo.flight_data; select 1')",
+							"value": "@concat('select * ','''',variables('get_month'),'''',' as new_column from dbo.flight_data; select 1')",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
