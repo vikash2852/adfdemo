@@ -17,6 +17,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "select top 20 * from dbo.flight_data ",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -86,7 +90,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "@item()",
+										"value": "@concat('select *,','''',variables('get_month'),'''','as new_month from dbo.flight_data' )",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -95,7 +99,8 @@
 								"dataset": {
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference"
-								}
+								},
+								"firstRowOnly": false
 							}
 						}
 					]
