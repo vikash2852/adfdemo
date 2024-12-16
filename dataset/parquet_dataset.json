@@ -1,23 +1,20 @@
 {
-	"name": "textfile",
+	"name": "parquet_dataset",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "test.txt",
+				"fileName": "userdata1.parquet",
 				"folderPath": "vikash",
 				"fileSystem": "sayali"
 			},
-			"columnDelimiter": "|",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"compressionCodec": "none"
 		},
 		"schema": []
 	}
