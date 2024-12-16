@@ -1,0 +1,9 @@
+{
+	"name": "practiceADFviki",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "64383c48-91c8-4a03-819b-8176254c44db",
+		"tenantId": "6dae2c7c-135d-4405-9b78-80d066c5261c"
+	}
+}
