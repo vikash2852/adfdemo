@@ -1,5 +1,5 @@
 {
-	"name": "inputdata",
+	"name": "textfile",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -19,20 +19,6 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "year",
-				"type": "String"
-			},
-			{
-				"name": "month",
-				"type": "String"
-			},
-			{
-				"name": "passengers",
-				"type": "String"
-			}
-		]
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+		"schema": []
+	}
 }
