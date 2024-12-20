@@ -9,6 +9,12 @@
 					"referenceName": "parquet_file",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "copy_text_file",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
@@ -16,7 +22,7 @@
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 2,
-				"startTime": "2024-12-19T09:18:00",
+				"startTime": "2024-12-19T09:22:00",
 				"timeZone": "India Standard Time"
 			}
 		}
