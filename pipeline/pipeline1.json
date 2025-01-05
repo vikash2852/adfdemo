@@ -44,10 +44,7 @@
 				"inputs": [
 					{
 						"referenceName": "AzureSqlTable1",
-						"type": "DatasetReference",
-						"parameters": {
-							"table_name": "flight_data"
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
