@@ -3,10 +3,22 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "generic_db_ls",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"database_name": {
+					"value": "@dataset().database_name",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"table_name": {
+				"type": "string"
+			},
+			"schema": {
+				"type": "string"
+			},
+			"database_name": {
 				"type": "string"
 			}
 		},
@@ -14,6 +26,10 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schema",
+				"type": "Expression"
+			},
 			"table": {
 				"value": "@dataset().table_name",
 				"type": "Expression"
