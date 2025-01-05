@@ -20,8 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "output",
-							"wildcardFileName": "flight_data.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -86,7 +84,12 @@
 				"inputs": [
 					{
 						"referenceName": "inputdata",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container_name": "fordataload",
+							"folder_name": "hospital_a",
+							"file_name": "departments.csv"
+						}
 					}
 				],
 				"outputs": [
@@ -94,7 +97,7 @@
 						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference",
 						"parameters": {
-							"table_name": "flight_new"
+							"table_name": "departments"
 						}
 					}
 				]
