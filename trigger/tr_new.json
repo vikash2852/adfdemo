@@ -2,17 +2,11 @@
 	"name": "tr_new",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
 					"referenceName": "copy_text_file",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
-					"referenceName": "parquet_file",
 					"type": "PipelineReference"
 				}
 			}
