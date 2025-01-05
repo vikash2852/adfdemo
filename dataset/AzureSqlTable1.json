@@ -2,7 +2,7 @@
 	"name": "AzureSqlTable1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase1",
+			"referenceName": "generic_db_ls",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -14,7 +14,6 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "dbo",
 			"table": {
 				"value": "@dataset().table_name",
 				"type": "Expression"
